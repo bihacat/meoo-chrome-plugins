@@ -46,20 +46,23 @@ function beginPlayVideo() {
   console.log("video start play");
 
   v.onended = () => {
-    const current = $(".cells>.currents").parent();
+    const current = $(".ncells>.currents").parent();
     // 去下一个视频
     if (current.siblings().length === current.index()) {
+      console.log('下一章')
       // 当前级别最后一个，跳转到下一章
       $(".ncells>.currents")
         .parent()
-        .parent.next()
-        .children(".ncells")
+        .parent()
+        .next()
+        .children(".ncells:first")
         .children("h4")
         .children("a")
         .children("span")
         .click();
     } else {
       // 不是当前级别最后一个，跳转下一节
+      console.log('下一节')
       $(".ncells>.currents")
         .parent()
         .next()
