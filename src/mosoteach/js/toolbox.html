@@ -1,0 +1,46 @@
+<div class="toolbox hidden">
+    <div class="btn fold">工具条</div>
+    <div class="btn drag" title="设置全部视频为可以拖拽">仅设置为可拖拽</div>
+    <div class="btn complete">全部自动完成</div>
+    <video muted id="hackVideo" preload="auto" style="width: 0; height: 0; visibility: hidden; display: none"></video>
+    <div class="log"></div>
+</div>
+<style>
+    .toolbox {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background-color: #fff;
+        z-index: 9999;
+        border-right: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+    .toolbox.hidden {
+        height: 40px;
+        overflow: hidden;
+    }
+    .toolbox>.fold::before {
+        content: '▼';
+        margin-right: 8px;
+    }
+    .toolbox.hidden>.fold::before {
+        content: '▶︎';
+        margin-right: 8px;
+    }
+
+    .toolbox>div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .toolbox>.btn{
+        cursor: pointer;
+        height: 40px;
+    }
+
+    .toolbox>.btn:hover {
+        background-color: #eee;
+    }
+</style>

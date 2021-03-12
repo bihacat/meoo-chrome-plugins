@@ -1,6 +1,7 @@
 import $ from 'jquery'
 
 $(function () {
+  console.log('ojbk')
   reTriggerVideoTag();
 
   // 监听新课程播放
@@ -25,6 +26,7 @@ function monitorIframeLoad() {
   reTriggerVideoTag();
   $("#iframe").on("load", beginPlayVideo);
 }
+
 function beginPlayVideo() {
   console.log("loaded");
   const videoIframe = $("#iframe").contents().find("iframe").contents(); // 获取video所在的iframe
@@ -51,8 +53,7 @@ function beginPlayVideo() {
     if (current.siblings().length === current.index()) {
       console.log('下一章')
       // 当前级别最后一个，跳转到下一章
-      $(".ncells>.currents")
-        .parent()
+      current
         .parent()
         .next()
         .children(".ncells:first")
@@ -63,8 +64,7 @@ function beginPlayVideo() {
     } else {
       // 不是当前级别最后一个，跳转下一节
       console.log('下一节')
-      $(".ncells>.currents")
-        .parent()
+      current
         .next()
         .children("h4")
         .children("a")

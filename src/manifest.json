@@ -1,12 +1,46 @@
 {
-	"manifest_version": 2,
-    "name": "Meoo",
-    "version": "1.0.0",
-    "content_scripts": [
-        {
-			"matches": ["https://mooc1.chaoxing.com/mycourse/studentstudy?*"],
-			"js": ["./chaoxing/main.js"],
-			"run_at": "document_end"
-		}
-    ]
+  "manifest_version": 2,
+  "name": "Meoo",
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "version": "1.0.0",
+  "description": "Meoo工具集合",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.chaoxing.com/mycourse/studentstudy?*"
+      ],
+      "js": [
+        "commons/main.js",
+        "chaoxing/main.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.mosoteach.cn/*"
+      ],
+      "js": [
+        "commons/main.js",
+        "mosoteach/main.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://nfstar.net/*"
+      ],
+      "js": [
+        "commons/main.js",
+        "nfstar/main.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "page_action": {
+    "default_icon": "assets/icon.png"
+  }
 }
