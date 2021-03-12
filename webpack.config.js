@@ -1,5 +1,6 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const path = require('path')
 
 module.exports = {
@@ -31,7 +32,14 @@ module.exports = {
             patterns: [
                 {from: './src/manifest.json', to: 'manifest.json'}
             ]
-        })
+        }),
+        new UglifyJsPlugin({
+            uglifyOptions: {
+              compress: {
+                drop_console: true
+              }
+            }
+          })
     ],
     optimization: {
     //抽取公共的dm

@@ -32,7 +32,7 @@ function beginPlayVideo() {
 
   const bigPlayButton = videoIframe.find("button.vjs-big-play-button"); // 获取大播放按钮对象
   console.log("get bigPlayButton", bigPlayButton);
-  console.log(bigPlayButton.trigger("click")); // 自动开始播放
+  bigPlayButton.trigger("click"); // 自动开始播放
 
   const v = videoIframe.find("video").get(0); // 获取video对象
   if (v === undefined) {
