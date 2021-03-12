@@ -1,0 +1,12 @@
+{
+	"manifest_version": 2,
+    "name": "meoo",
+    "version": "1.0.0",
+    "content_scripts": [
+        {
+			"matches": ["https://mooc1.chaoxing.com/mycourse/studentstudy?*"],
+			"js": ["./chaoxing/main.js"],
+			"run_at": "document_end"
+		}
+    ]
+}
