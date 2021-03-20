@@ -11,7 +11,10 @@
   "content_scripts": [
     {
       "matches": [
-        "https://*.chaoxing.com/mycourse/studentstudy?*"
+        "https://mooc1.chaoxing.com/mycourse/studentstudy?*",
+        "https://mooc1-1.chaoxing.com/mycourse/studentstudy?*",
+        "https://mooc1-2.chaoxing.com/mycourse/studentstudy?*",
+        "https://mooc1-3.chaoxing.com/mycourse/studentstudy?*"
       ],
       "js": [
         "commons/main.js",
@@ -21,7 +24,7 @@
     },
     {
       "matches": [
-        "https://www.mosoteach.cn/*"
+        "https://www.mosoteach.cn/web/index.php?*"
       ],
       "js": [
         "commons/main.js",
