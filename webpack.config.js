@@ -8,7 +8,8 @@ module.exports = {
   entry: {
     chaoxing: "./src/chaoxing/main.js",
     mosoteach: './src/mosoteach/main.js',
-    nfstar: './src/nfstar/main.js'
+    nfstar: './src/nfstar/main.js',
+    icourse163: './src/icourse163/main.js'
   },
   output: {
     filename: '[name]/main.js',

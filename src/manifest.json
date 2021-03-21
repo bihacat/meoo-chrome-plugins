@@ -6,7 +6,7 @@
     "48": "assets/icon.png",
     "128": "assets/icon.png"
   },
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Meoo工具集合",
   "content_scripts": [
     {
@@ -39,6 +39,16 @@
       "js": [
         "commons/main.js",
         "nfstar/main.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://www.icourse163.org/*"
+      ],
+      "js": [
+        "commons/main.js",
+        "icourse163/main.js"
       ],
       "run_at": "document_end"
     }
