@@ -1,3 +1,5 @@
+import $ from 'jquery'
+
 let answerTime = 0;
 $(document).ready(function () {
   try {
