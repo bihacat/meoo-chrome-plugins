@@ -13,7 +13,7 @@ function mainScript() {
   video.onpause = function () {
     // 点击一个选项
     document.querySelector('').children[answerTime].querySelector('input').click()
-    // 点击
+    // 点击提交
     document.querySelector('.u-btn.u-btn-default.submit.j-submit').click()
     const answerDom = document.querySelector('.analysisInfo')
     const result = answerDom.attributes.class.textContent.split(' ').includes('answrong')
@@ -25,6 +25,7 @@ function mainScript() {
       console.log('回答正确，继续看视频', answerDom)
       answerTime = 0
     }
+    // 点击继续播放
     $('.u-btn.u-btn-default.cont.j-continue').click()
   }
 }
