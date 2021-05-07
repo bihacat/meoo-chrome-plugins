@@ -1,4 +1,3 @@
-import $ from 'jquery'
 
 $(document).ready(function () {
   $('.stui-pannel_hd').remove()

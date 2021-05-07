@@ -39,7 +39,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {from: './src/manifest.json', to: 'manifest.json'},
-        {from: './src/assets', to: 'assets/[name][ext]'}
+        {from: './src/assets', to: 'assets/[name][ext]'},
+        {from: './src/runtime/**', to: 'runtime/[name][ext]'}
       ]
     }),
     new UglifyJsPlugin({
@@ -50,16 +51,16 @@ module.exports = {
       }
     })
   ],
-  optimization: {
-    //抽取公共的dm
-    splitChunks: {
-      cacheGroups: {
-        commons: {
-          name: "commons",
-          chunks: "initial",
-          minChunks: 2
-        }
-      }
-    }
-  },
+  // optimization: {
+  //   //抽取公共的dm
+  //   splitChunks: {
+  //     cacheGroups: {
+  //       commons: {
+  //         name: "commons",
+  //         chunks: "initial",
+  //         minChunks: 2
+  //       }
+  //     }
+  //   }
+  // },
 }

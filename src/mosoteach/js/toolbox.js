@@ -1,4 +1,3 @@
-import $ from 'jquery'
 
 export const Toolbox = {
   // 折叠工具栏

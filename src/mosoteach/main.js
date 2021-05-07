@@ -1,7 +1,8 @@
 import toolbox from './js/toolbox.html'
 import { Hack as h } from './js/complete'
 import { Toolbox as t } from './js/toolbox'
-import $ from 'jquery'
+
+chrome.runtime.sendMessage({todo: 'showPageAction'})
 
 $(document).ready(function () {
   console.log('ok')

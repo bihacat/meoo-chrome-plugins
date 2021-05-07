@@ -1,4 +1,3 @@
-import $ from 'jquery'
 
 export const Hack = {
   initial () {
