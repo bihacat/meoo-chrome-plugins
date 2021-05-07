@@ -1,6 +1,6 @@
-chrome.runtime.onMessage.addListener(function(request) {
+chrome.runtime.onMessage.addListener((request) => {
   if (request.todo === 'showPageAction') {
-    chrome.tabs.query({active: true, currentWindow: true}, function(tabs){
+    chrome.tabs.query({active: true, currentWindow: true}, (tabs) => {
       chrome.pageAction.show(tabs[0].id);
     });
   }
