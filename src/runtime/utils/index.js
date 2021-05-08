@@ -1,10 +1,10 @@
 /**
- * @param appName app名
+ * @param appName 目录名
  */
 export const inject = (appName) => {
-  chrome.runtime.sendMessage({todo: 'showPageAction'})
+  chrome.runtime.sendMessage({action: 'hightlightIcon'})
   chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (request.todo === 'app') {
+    if (request.action === 'getApp') {
       sendResponse(appName)
     }
   })

@@ -10,7 +10,7 @@
   "description": "Meoo工具集合",
   "background": {
     "scripts": [
-      "runtime/background.js"
+      "runtime/background/main.js"
     ],
     "persistent": false
   },
@@ -23,7 +23,7 @@
         "https://mooc1-3.chaoxing.com/mycourse/studentstudy?*"
       ],
       "js": [
-        "runtime/jquery.min.js",
+        "runtime/utils/jquery.min.js",
         "chaoxing/main.js"
       ],
       "run_at": "document_end"
@@ -33,7 +33,7 @@
         "https://www.mosoteach.cn/web/index.php?*"
       ],
       "js": [
-        "runtime/jquery.min.js",
+        "runtime/utils/jquery.min.js",
         "mosoteach/main.js"
       ],
       "run_at": "document_end"
@@ -43,7 +43,7 @@
         "https://nfstar.net/*"
       ],
       "js": [
-        "runtime/jquery.min.js",
+        "runtime/utils/jquery.min.js",
         "nfstar/main.js"
       ],
       "run_at": "document_end"
@@ -53,28 +53,26 @@
         "https://www.icourse163.org/*"
       ],
       "js": [
-        "runtime/jquery.min.js",
+        "runtime/utils/jquery.min.js",
         "icourse163/main.js"
       ],
       "run_at": "document_end"
     },
     {
       "matches": [
-        "http://m.rr.tv/detail/*"
+        "http://m.rr.tv/*"
       ],
       "js": [
-        "runtime/jquery.min.js",
+        "runtime/utils/jquery.min.js",
         "mrrtv/main.js"
       ]
     }
   ],
   "permissions": [
-    "tabs",
-    "http://m.rr.tv/detail/*",
-    "https://www.mosoteach.cn/web/index.php?*"
+    "tabs"
   ],
   "page_action": {
-    "default_popup": "runtime/popup.html",
+    "default_popup": "runtime/popup/popup.html",
     "default_icon": "assets/icon.png"
   }
 }

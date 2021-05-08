@@ -1,0 +1,17 @@
+.row {
+  margin-bottom: 4px;
+  padding-bottom: 4px;
+}
+
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.white-nowrap {
+  white-space: nowrap;
+}

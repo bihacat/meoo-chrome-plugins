@@ -1,3 +1,6 @@
+import { inject } from '../runtime/utils';
+
+inject('chaoxing');
 
 $(function () {
   console.log('ojbk')

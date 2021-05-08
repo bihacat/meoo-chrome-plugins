@@ -1,8 +1,9 @@
 import toolbox from './js/toolbox.html'
 import { Hack as h } from './js/complete'
 import { Toolbox as t } from './js/toolbox'
+import { inject } from '../runtime/utils'
 
-chrome.runtime.sendMessage({todo: 'showPageAction'})
+inject('mosoteach');
 
 $(document).ready(function () {
   console.log('ok')

@@ -1,3 +1,7 @@
+import { inject } from '../runtime/utils';
+
+inject('icourse163');
+
 let answerTime = 0;
 document.onreadystatechange = function () {
   switch (document.readyState) {

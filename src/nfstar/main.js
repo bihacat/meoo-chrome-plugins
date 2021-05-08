@@ -1,3 +1,6 @@
+import { inject } from '../runtime/utils';
+
+inject('nfstar');
 
 $(document).ready(function () {
   $('.stui-pannel_hd').remove()

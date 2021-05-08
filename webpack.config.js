@@ -10,7 +10,7 @@ module.exports = {
     mosoteach: './src/mosoteach/main.js',
     nfstar: './src/nfstar/main.js',
     icourse163: './src/icourse163/main.js',
-    mrrtv: './src/mrrtv/main.js'
+    mrrtv: './src/mrrtv/main.js',
   },
   output: {
     filename: '[name]/main.js',
@@ -40,7 +40,7 @@ module.exports = {
       patterns: [
         {from: './src/manifest.json', to: 'manifest.json'},
         {from: './src/assets', to: 'assets/[name][ext]'},
-        {from: './src/runtime/**', to: 'runtime/[name][ext]'}
+        {from: './src/runtime/', to: 'runtime'},
       ]
     }),
     new UglifyJsPlugin({
